@@ -35,17 +35,15 @@ CREATE TABLE `TAXI` (
 CREATE TABLE `USER` (
   `UserID` integer,
   `User_email` VARCHAR(30),
-  `Contact No` integer,
+  `Contact_No` integer,
   `Name` VARCHAR(30),
   `Gender` VARCHAR(30),
-  `Location` VARCHAR(30)
+  `Address` VARCHAR(30)
 );
 
 CREATE TABLE `BILL DETAILS` (
   `Bill No` integer,
   `date_bill` integer,
-  `adv_amt` integer,
-  `disc_amt` integer,
   `tot_amt` integer
 );
 
