@@ -15,9 +15,10 @@ CREATE TABLE `TRIP DETAILS` (
   `TripAmount` integer,
   `StartTime` integer,
   `TripAmount` integer,
-  `EndTIme` integer,
+  `EndTime` integer,
   `Taxi_ID` integer,
   `Pool_num` integer,
+  `StartLocation` VARCHAR(30),
   `Destination` VARCHAR(30)
 );
 
@@ -33,11 +34,11 @@ CREATE TABLE `TAXI` (
 
 CREATE TABLE `USER` (
   `UserID` integer,
+  `User_email` VARCHAR(30),
   `Contact No` integer,
   `Name` VARCHAR(30),
   `Gender` VARCHAR(30),
-  `Location` VARCHAR(30),
-  `TaxiID` integer
+  `Location` VARCHAR(30)
 );
 
 CREATE TABLE `BILL DETAILS` (
@@ -50,7 +51,6 @@ CREATE TABLE `BILL DETAILS` (
 
 CREATE TABLE `FEEDBACK` (
   `Feedback` VARCHAR(30),
-  `User_email` VARCHAR(30),
   `User_id` integer,
   `Bill_no` integer,
   `Emp_id` integer,
