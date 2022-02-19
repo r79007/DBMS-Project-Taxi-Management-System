@@ -5,7 +5,7 @@ USE DBMS_PROJECT;
 CREATE TABLE `DRIVER` (
   `Name` VARCHAR(30),
   `Gender` VARCHAR(30),
-  `Contact Number` integer,
+  `Contact_No` integer,
   `Age` integer,
   `Driver_ID` integer primary key NOT NULL , 
   `Rating` integer
@@ -28,7 +28,7 @@ CREATE TABLE `TAXI` (
   `Status` VARCHAR(30),
   `Model` VARCHAR(30),
   `Year` integer,
-  `Car type` VARCHAR(30),
+  `Car_type` VARCHAR(30),
   `Driver_ID` integer
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE `USER` (
 );
 
 CREATE TABLE `BILL DETAILS` (
-  `Bill No` integer,
+  `Bill_no` integer,
   `date_bill` integer,
   `tot_amt` integer
 );
