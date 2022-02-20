@@ -1,16 +1,18 @@
-DROP TABLE IF EXISTS `CUSTOMER_SERVICE`;
+DROP database IF EXISTS `dbms_project`;
+create DATABASE dbms_project;
+use dbms_project;
 
 CREATE TABLE `CUSTOMER_SERVICE` (
   `Employ_ID` integer PRIMARY KEY NOT NULL,
   `Name` VARCHAR(30),
-  `Contact_No` integer
+  `Contact_No` VARCHAR(30)
 );
 DROP TABLE IF EXISTS `USER`;
 
 CREATE TABLE `USER` (
   `UserID` integer PRIMARY KEY NOT NULL,
-  `User_email` VARCHAR(30),
-  `Contact_No` integer,
+  `User_email` VARCHAR(50),
+  `Contact_No` VARCHAR(30),
   `Name` VARCHAR(30),
   `Gender` VARCHAR(30),
   `Address` VARCHAR(30)
@@ -28,7 +30,7 @@ DROP TABLE IF EXISTS `DRIVER`;
 CREATE TABLE `DRIVER` (
   `Name` VARCHAR(30),
   `Gender` VARCHAR(30),
-  `Contact_No` integer,
+  `Contact_No` VARCHAR(30),
   `Age` integer,
   `Driver_ID` integer PRIMARY KEY NOT NULL , 
   `Rating` integer
@@ -42,7 +44,7 @@ CREATE TABLE `FEEDBACK` (
   `Bill_no` integer,
   `employ_id` integer,
 
-  FOREIGN KEY (User_id) REFERENCES USER(user_id),
+  FOREIGN KEY (User_id) REFERENCES USER(UserID),
   FOREIGN KEY (employ_id) REFERENCES CUSTOMER_SERVICE(employ_id),
   FOREIGN KEY (Bill_no) REFERENCES BILL_DETAILS(Bill_no)
 );
