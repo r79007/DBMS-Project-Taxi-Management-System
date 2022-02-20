@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS `CUSTOMER_SERVICE`;
 CREATE TABLE `CUSTOMER_SERVICE` (
   `Employ_ID` integer PRIMARY KEY NOT NULL,
   `Name` VARCHAR(30),
-  'Contact_No' integer
+  `Contact_No` integer
 );
 DROP TABLE IF EXISTS `USER`;
 
