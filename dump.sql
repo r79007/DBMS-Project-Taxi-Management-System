@@ -1,4 +1,6 @@
-USE `TAXI_COMPANY`;
+DROP database IF EXISTS `dbms_project`;
+create DATABASE dbms_project;
+use dbms_project;
 
 DROP TABLE IF EXISTS `USER`;
 CREATE TABLE `USER` (
