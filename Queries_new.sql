@@ -5,6 +5,7 @@ SELECT U.UserID from USER U, FEEDBACK F, BILL_DETAILS B where B.Bill_no=F.Bill_n
 
 select Driver_ID from DRIVER where Rating>=4;   
 
+SELECT U.UserID from USER U, FEEDBACK F, BILL_DETAILS B where B.Bill_no=F.Bill_no and B.tot_amt>=4000 and F.UserID=U.UserID order by U.UserID asc;
 
 select D.Contact_no from DRIVER D, TAXI T where D.Driver_ID=T.Driver_ID and T.Car_type='SUV';
 
