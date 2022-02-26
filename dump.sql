@@ -9137,6 +9137,5 @@ INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (
 INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (998,4349848762,'Tercel',2014,'SUV');
 INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (999,6275495839,'Chariot',2015,'SUV');
 
-select * from CAR_MANUFACTURER;
 
 COMMIT;
