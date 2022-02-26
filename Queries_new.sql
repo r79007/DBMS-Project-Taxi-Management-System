@@ -1,8 +1,6 @@
 SELECT Name, User_email FROM USER WHERE UserID in (SELECT UserID FROM FEEDBACK WHERE feedback = 'Bad');
 
 
-SELECT U.UserID from USER U, FEEDBACK F, BILL_DETAILS B where B.Bill_no=F.Bill_no and B.tot_amt>50 and F.UserID=U.UserID order by U.UserID asc;
-
 select Driver_ID from DRIVER where Rating>=4;   
 
 SELECT U.UserID from USER U, FEEDBACK F, BILL_DETAILS B where B.Bill_no=F.Bill_no and B.tot_amt>=4000 and F.UserID=U.UserID order by U.UserID asc;
