@@ -9143,3 +9143,5 @@ INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (
 
 
 COMMIT;
+
+select * from BILL_DETAILS where Payment_mode='e-wallet';
