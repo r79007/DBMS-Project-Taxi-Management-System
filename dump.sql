@@ -6088,7 +6088,7 @@ CREATE TABLE `BILL_DETAILS` (
   `Bill_no` integer PRIMARY KEY NOT NULL,
   `date_bill` VARCHAR(20),
   `tot_amt` DECIMAL,
-  `TripID` integer,
+  `TripID` integer NOT NULL,
   `Payment_mode` Varchar(10)
   
   
@@ -9143,5 +9143,3 @@ INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (
 
 
 COMMIT;
-
-select * from BILL_DETAILS where Payment_mode='e-wallet';
