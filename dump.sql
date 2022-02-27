@@ -7091,9 +7091,6 @@ UPDATE BILL_DETAILS t1
 INNER JOIN adder t2 ON t1.Bill_no = t2.TripID-1 
 SET t1.tot_amt = t2.TripAmount;
 
-INSERT INTO TRIP_DETAILS SELECT UserID FROM USER;
-
-
 drop table if exists `TRIP_DETAILS`;
 CREATE TABLE `TRIP_DETAILS` (
 `TripID` INTEGER,
