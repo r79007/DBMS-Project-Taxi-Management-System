@@ -6092,6 +6092,7 @@ CREATE TABLE `BILL_DETAILS` (
   `Payment_mode` Varchar(10)
   
   
+  
 );
 INSERT INTO BILL_DETAILS VALUES(0,'09/06/2021',3784.7899999999999635,1,'Cash');
 INSERT INTO BILL_DETAILS VALUES(1,'20/06/2021',1131,2,'Cash');
@@ -7103,6 +7104,8 @@ ALTER TABLE BILL_DETAILS MODIFY tot_amt DECIMAL;
 UPDATE BILL_DETAILS t1
 INNER JOIN adder t2 ON t1.Bill_no = t2.TripID-1 
 SET t1.tot_amt = t2.TripAmount;
+
+
 
 DROP TABLE IF EXISTS `FEEDBACK`;
 CREATE TABLE `FEEDBACK` (
@@ -9141,5 +9144,11 @@ INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (
 INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (998,4349848762,'Tercel',2014,'SUV');
 INSERT INTO CAR_MANUFACTURER(Car_ID,Registrationid,Model,Year,Car_type) VALUES (999,6275495839,'Chariot',2015,'SUV');
 
+alter table BILL_DETAILS add UserID integer;
+update BILL_DETAILS x
+inner join TRIP_DETAILS y on x.TripID=y.TripID
+set x.UserID=y.UserID;
+
+select * from BILL_DETAILS;
 
 COMMIT;
